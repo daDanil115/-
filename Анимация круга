@@ -1,0 +1,36 @@
+import turtle
+t=turtle.Pen()
+screen=turtle.Screen()
+turtle.bgcolor("black")
+n=0
+
+def узор():
+    for x in range(1):
+        t.width(2)
+        t.penup()
+        t.forward(50)
+        t.pendown()
+        t.circle(100)
+
+def quit():
+    turtle.bye()
+
+colors=["red", "orange", "yellow", "green", "cyan", "blue", "purple"]
+#screen.tracer(0)
+turtle.speed(50)
+turtle.delay(0)
+t.hideturtle()
+
+turtle.onkey(quit, "q")
+turtle.listen()
+
+for g in range(6):
+    t.pencolor(colors[g%7])
+    узор()
+    n=n+10
+    t.penup()
+    t.home()
+    t.right(n)
+    t.pendown()
+
+turtle.exitonclick()
