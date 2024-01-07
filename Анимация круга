@@ -24,7 +24,7 @@ t.hideturtle()
 turtle.onkey(quit, "q")
 turtle.listen()
 
-for g in range(6):
+for g in range(36):
     t.pencolor(colors[g%7])
     узор()
     n=n+10
