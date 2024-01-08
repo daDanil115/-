@@ -1,0 +1,39 @@
+from tkinter import *
+import turtle
+t=turtle.Pen()
+turtle.setup(500,500)
+turtle.title("Фигуры")
+
+def круг():
+    t.clear()
+    t.color("green")
+    t.circle(50)
+
+def квадрат():
+    t.clear()
+    for g in range(4):
+        t.color("blue")
+        t.forward(100)
+        t.right(90)
+
+def треугольник():
+    t.clear()
+    for g in range(3):
+        
+        t.color("red")
+        t.left(120)
+        t.forward(100)
+        t.forward(100)
+
+root = Tk()
+root.title("Панель управления")
+root.geometry("400x300")
+
+button1 = Button(root, text="круг", font=40, command=круг)
+button1.place(x=10,y=10, width=100, height=30)
+button2 = Button(root, text="квадрат", font=40, command=квадрат)
+button2.place(x=120,y=10, width=100, height=30)
+button3 = Button(root, text="треугольник", font=40, command=треугольник)
+button3.place(x=230,y=10, width=100, height=30)
+
+root.mainloop()
